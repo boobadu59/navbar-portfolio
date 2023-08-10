@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700&family=Inria+Sans&family=Merienda&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,600;6..12,700&family=Poppins&family=Roboto&display=swap');
+
+
+*
+{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+}
+body
+{
+        font-family: 'Inria Sans', sans-serif;
+        background-color: #333;
+}
+header
+{
+        width: 100% ;
+        height: 70px;
+        position: absolute;
+
+}
+
+.nav-bar
+{
+        width: 100%;
+        height: 100%;
+        
+
+
+}
+.liste-menu
+{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 35px;
+        font-size: 18px;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+        
+}
+.item{
+        list-style-type: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+}
+.item a 
+{
+        text-decoration: none;
+        color: beige;
+        
+}
+
+.item a::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        border-bottom: 2px solid beige;
+        transition: width 0.3s ease-in-out;
+        margin: 0 auto;
+        display: block;
+}
+.item  a:hover::after
+{
+        width: 100%;
+}
+
+.hamburger
+{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+        display: none;
+}
+@media screen and (max-width: 950px){
+        .hamburger
+        {
+                display: block;
+        }
+       
+        .liste-menu
+        {
+                
+                display: none;
+                padding-top: 70px;
+                height: auto;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                
+                
+        }
+        .liste-menu.active
+        {
+                display: block;
+        }
+        .item
+        {
+                
+                
+                height: 70px;
+                justify-content: center;
+        }
+       
+        
+}
+
+.logo
+{
+        text-decoration: none;
+        color: beige;
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        display: inline-block;
+}
+.logo a{
+        text-decoration: none;
+        color: beige;
+}
